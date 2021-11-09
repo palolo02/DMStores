@@ -1,0 +1,42 @@
+[2021-11-08 10:46:54,811] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: etl.Product_category manual__2021-11-08T10:46:26.584435+00:00 [queued]>
+[2021-11-08 10:46:54,924] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: etl.Product_category manual__2021-11-08T10:46:26.584435+00:00 [queued]>
+[2021-11-08 10:46:54,926] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-08 10:46:54,927] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-08 10:46:54,929] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-08 10:46:55,023] {taskinstance.py:1262} INFO - Executing <Task(ProductCategoryOperator): Product_category> on 2021-11-08 10:46:26.584435+00:00
+[2021-11-08 10:46:55,162] {standard_task_runner.py:52} INFO - Started process 1863 to run task
+[2021-11-08 10:46:55,183] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'etl', 'Product_category', 'manual__2021-11-08T10:46:26.584435+00:00', '--job-id', '217', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpuev34nf5', '--error-file', '/tmp/tmp3aqul0m1']
+[2021-11-08 10:46:55,218] {standard_task_runner.py:77} INFO - Job 217: Subtask Product_category
+[2021-11-08 10:46:56,200] {logging_mixin.py:109} INFO - Running <TaskInstance: etl.Product_category manual__2021-11-08T10:46:26.584435+00:00 [running]> on host 9b9dd5aa62e4
+[2021-11-08 10:47:11,461] {taskinstance.py:1414} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=etl
+AIRFLOW_CTX_TASK_ID=Product_category
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-08T10:46:26.584435+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-11-08T10:46:26.584435+00:00
+[2021-11-08 10:47:11,469] {db.py:25} INFO - Connecting to DB
+[2021-11-08 10:47:11,489] {logging_mixin.py:109} INFO - Reading config file
+[2021-11-08 10:47:11,829] {productCategory.py:44} INFO - rows to process in stg_Products: 51
+[2021-11-08 10:47:11,830] {productCategory.py:46} INFO - Cleaning data
+[2021-11-08 10:47:11,926] {productCategory.py:53} INFO - Comparing rows in product category
+[2021-11-08 10:47:13,465] {productCategory.py:59} INFO - +-----------------------+----------------------------+
+| product_category_name | created_dt                 |
++=======================+============================+
+| 'Art & Crafts'        | datetime.date(2021, 11, 8) |
++-----------------------+----------------------------+
+| 'Electronics'         | datetime.date(2021, 11, 8) |
++-----------------------+----------------------------+
+| 'Games'               | datetime.date(2021, 11, 8) |
++-----------------------+----------------------------+
+| 'Sports & Outdoors'   | datetime.date(2021, 11, 8) |
++-----------------------+----------------------------+
+| 'Toys'                | datetime.date(2021, 11, 8) |
++-----------------------+----------------------------+
+
+[2021-11-08 10:47:13,467] {logging_mixin.py:109} INFO - Running Product Categories Process
+[2021-11-08 10:47:13,863] {taskinstance.py:1280} INFO - Marking task as SUCCESS. dag_id=etl, task_id=Product_category, execution_date=20211108T104626, start_date=20211108T104654, end_date=20211108T104713
+[2021-11-08 10:47:15,328] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-11-08 10:47:18,230] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

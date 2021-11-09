@@ -1,0 +1,12 @@
+
+{
+    "db_connection": {
+        "host": "",
+        "port": "",
+        "database": "",
+        "user": "",
+        "password": ""
+    },
+    "files" : ["Sales.csv", "Products.csv", "Stores.csv", "Inventory.csv", "Customer.csv","Ratings.csv"],
+    "directory" : "data/"
+}
